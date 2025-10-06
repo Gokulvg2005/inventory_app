@@ -24,4 +24,5 @@ This is a Flask-based inventory management system with the following features:
 
 Installation
 Clone the repository:
-git clone  https://github.com/Gokulvg2005/inventory_app
+git clone 
+https://github.com/Gokulvg2005/inventory_app
