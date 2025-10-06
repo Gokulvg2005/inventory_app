@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+  <h2>{{ action }} Movement</h2>
+  <form method="post">
+    {{ form.hidden_tag() }}
+    <div class="mb-3">
+      {{ form.product_id.label(class="form-label") }}
+      {{ form.product_id(class="form-select") }}
+    </div>
+    <div class="mb-3">
+      {{ form.from_location.label(class="form-label") }}
+      {{ form.from_location(class="form-select") }}
+      <div class="form-text">Leave blank if the stock is incoming (new stock)</div>
+    </div>
+    <div class="mb-3">
+      {{ form.to_location.label(class="form-label") }}
+      {{ form.to_location(class="form-select") }}
+      <div class="form-text">Leave blank if the stock is outgoing (sold or removed)</div>
+    </div>
+    <div class="mb-3">
+      {{ form.qty.label(class="form-label") }}
+      {{ form.qty(class="form-control") }}
+    </div>
+    <button class="btn btn-primary">{{ action }}</button>
+    <a class="btn btn-secondary" href="{{ url_for('movements') }}">Cancel</a>
+  </form>
+{% endblock %}
